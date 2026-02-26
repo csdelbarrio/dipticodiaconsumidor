@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precios Equitativos, Derechos Protegidos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --naranja: #E84E1B;
+    --negro: #1A1A1A;
+    --blanco: #FAFAF8;
+    --gris: #F2F0EB;
+    --naranja-claro: #FFF0EB;
+  }
+
+  body {
+    background: #D4CFC8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 16px;
+  }
+
+  /* ── DIPTICO WRAPPER ── */
+  .diptico {
+    display: flex;
+    width: 560px;
+	height: 722px;
+    max-width: 100%;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.25);
+    position: relative;
+	margin-bottom:60px;
+  }
+
+
+  /* ════════════════════════════
+     CARA INTERIOR
+  ════════════════════════════ */
+
+  /* PANEL IZQUIERDO INTERIOR — El problema */
+  .panel {
+    flex: 1;
+    padding: 52px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-problema {
+    background: var(--blanco);
+  }
+
+  .panel-respuesta {
+    background: var(--negro);
+    color: var(--blanco);
+  }
+
+  /* ─ Encabezado panel problema ─ */
+  .panel-problema .panel-eyebrow {
+    display: inline-block;
+    background: var(--naranja);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+  }
+
+  .panel-problema .panel-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--negro);
+    margin-bottom: 10px;
+  }
+
+  .panel-problema .panel-titulo span {
+    color: var(--naranja);
+  }
+
+  .panel-problema .panel-intro {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+    border-left: 3px solid var(--naranja);
+    padding-left: 14px;
+    padding-top: 8px;
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+
+  /* bloques de problema */
+  .bloque {
+    margin-bottom: 24px;
+  }
+
+  .bloque-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+  }
+
+  .bloque-icono {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .bloque-icono img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .bloque-titulo {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--negro);
+  }
+
+  .bloque-texto {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #3a3a3a;
+    padding-left: 38px;
+  }
+
+  .bloque-divider {
+    height: 1px;
+    background: #E5E0D8;
+    margin: 20px 0;
+  }
+
+  /* ─ Panel respuesta (negro) ─ */
+  .panel-respuesta .panel-eyebrow {
+    display: inline-block;
+    background: var(--naranja);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+  }
+
+  .panel-respuesta .panel-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--blanco);
+    margin-bottom: 10px;
+  }
+
+  .panel-respuesta .panel-titulo span {
+    color: var(--naranja);
+  }
+
+  .panel-respuesta .panel-intro {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #bbb;
+    border-left: 3px solid var(--naranja);
+    padding-left: 14px;
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+
+  .bloque-resp .bloque-titulo {
+    color: var(--naranja);
+  }
+
+  .bloque-resp .bloque-texto {
+    color: #CCC;
+  }
+
+  .bloque-resp .bloque-divider {
+    background: #333;
+  }
+
+  .bloque-resp .bloque-icono {
+  }
+
+  /* demandas finales */
+  .demandas {
+    background: var(--naranja);
+    margin: 28px -44px -52px -44px;
+    padding: 24px 44px;
+  }
+
+  .demandas-titulo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 12px;
+  }
+
+  .demanda-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.4;
+  }
+
+  .demanda-bullet {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  /* ════════════════════════════
+     CARA EXTERIOR (segunda fila)
+  ════════════════════════════ */
+
+  .exterior {
+    width: 560px;
+    height: 722px;
+    max-width: 100%;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.2);
+    margin-bottom: 60px;
+  }
+
+  /* CONTRAPORTADA (izquierda en cara exterior) */
+  .panel-contraportada {
+    background: var(--gris) url('img/bg4.png');
+    flex: 1;
+    padding: 52px 44px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contra-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--naranja);
+    margin-bottom: 20px;
+  }
+
+  .contra-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--negro);
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .derecho-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDD8CF;
+  }
+
+  .derecho-item:last-child {
+    border-bottom: none;
+  }
+
+  .derecho-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--naranja);
+    line-height: 1;
+    width: 36px;
+    flex-shrink: 0;
+  }
+
+  .derecho-contenido {}
+
+  .derecho-nombre {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--negro);
+    margin-bottom: 3px;
+  }
+
+  .derecho-desc {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .contra-footer {
+    margin-top: auto;
+    padding-top: 28px;
+    border-top: 1px solid #DDD8CF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ministerio-logo-placeholder {
+    line-height: 1.2;
+  }
+  .ministerio-logo-placeholder img {
+    width: 220px;
+  }
+
+  .ministerio-nombre {
+    font-size: 10px;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+	  text-align: right;
+	  margin-left:60px;
+  }
+
+  /* PORTADA (derecha en cara exterior) */
+  .panel-portada {
+    background: var(--blanco) url('img/bg1.png');
+    flex: 1;
+    padding: 52px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portada-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--naranja);
+  }
+
+  .portada-titulo-grande {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: black;
+    margin: 60px 0 0 0;
+  }
+  .portada-titulo-grande2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: black;
+    margin: 0 0 0 0;
+  }
+
+  .portada-titulo-grande .highlight, .portada-titulo-grande2 .highlight {
+    display: inline-block;
+    background: var(--naranja);
+    color: white;
+    padding: 0 6px;
+    margin-top: 6px;
+  }
+
+  .portada-subtitulo {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 320px;
+  }
+
+  .portada-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-top: 32px;
+    font-size: 12.5px;
+    color: #CCC;
+    max-width: fit-content;
+  }
+
+  .portada-pill span {
+    color: var(--naranja);
+    font-weight: 700;
+  }
+
+  .portada-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .portada-logo-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .portada-logo-box {
+    width: 36px;
+    height: 36px;
+    background: var(--naranja);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .portada-min-nombre {
+    font-size: 10px;
+    font-weight: 600;
+    color: #666;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+	text-align: right;
+	margin-left:60px;
+  }
+
+  .portada-dia {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+    text-align: right;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── notas UI ── */
+  .nota-esquema {
+    width: 1120px;
+    max-width: 100%;
+    margin-top: 32px;
+    background: rgba(255,255,255,0.5);
+    border: 1px dashed #AAA;
+    border-radius: 6px;
+    padding: 18px 24px;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.7;
+  }
+
+  .nota-esquema strong {
+    color: var(--negro);
+  }
+</style>
+</head>
+<body>
+
+  <!-- PORTADA -->
+	
+<div class="diptico">
+  <div class="panel-portada">
+    <div>
+      <p class="portada-eyebrow">Día de las Personas Consumidoras · 2026</p>
+      <h1 class="portada-titulo-grande">
+        Precios equitativos,<br><span class="highlight">derechos</span><span class="highlight">protegidos</span>
+      </h1>
+      <p class="portada-subtitulo">
+        Los precios dinámicos y los algoritmos de las grandes plataformas están cambiando las reglas.<br />Conoce el asunto y la respuesta regulatoria.
+      </p>
+    </div>
+
+    <div class="portada-bottom">
+      <div class="portada-logo-placeholder">
+      <div class="ministerio-logo-placeholder"><img src="img/Logotipo_de_la_Dirección_General_de_Consumo.png" /></div>
+        <p class="portada-min-nombre">Secretaría General<br>de Consumo y Juego</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ──────────────────────────────── -->
+<!--  CARA INTERIOR                  -->
+<!-- ──────────────────────────────── -->
+<div class="diptico">
+
+  <div class="panel panel-problema">
+      <h1 class="portada-titulo-grande2">
+        Precios equitativos,<br><span class="highlight">derechos</span><span class="highlight">protegidos</span>
+      </h1>
+    <p class="panel-intro">
+      ¿Por qué el billete de avión cuesta el doble si lo buscas dos veces?<br />¿Por qué los hoteles suben de precio cuando hay una catástrofe?
+    </p>
+
+    <div class="bloque">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico1.png" /></div>
+        <span class="bloque-titulo">Qué son los precios dinámicos</span>
+      </div>
+      <p class="bloque-texto">Precios que cambian en tiempo real según quién compra, cuándo, desde qué dispositivo o en qué situación. Ya no hay un precio único y visible para todos: el precio que ves tú puede ser distinto al de otra persona para el mismo producto.</p>
+    </div>
+
+    <div class="bloque-divider"></div>
+
+    <div class="bloque">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico6.png" /></div>
+        <span class="bloque-titulo">Cómo te afectan</span>
+      </div>
+      <p class="bloque-texto">Generan opacidad, arbitrariedad y abuso. Los algoritmos explotan tu historial de búsquedas, tu localización y tu urgencia para cobrarte más. Esto destruye la confianza y dispara el coste de la vida.</p>
+    </div>
+
+    <div class="bloque-divider"></div>
+
+    <div class="bloque">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico3.png" /></div>
+        <span class="bloque-titulo">El papel de las plataformas</span>
+      </div>
+      <p class="bloque-texto">Hoteles, transportistas, artistas y pequeños negocios ya no controlan sus propios precios: lo hacen las plataformas que intermedian. Sus algoritmos maximizan beneficios a costa de consumidores y prestadores del servicio por igual.</p>
+    </div>
+
+    <div class="bloque-divider"></div>
+
+    <div class="bloque">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico5.png" /></div>
+        <span class="bloque-titulo">Transporte, hoteles, vuelos, conciertos…</span>
+      </div>
+      <p class="bloque-texto">Billetes de avión que cambian de precio mientras los buscas, entradas que se duplican durante la compra, alojamientos que se disparan en emergencias... Son los sectores más afectados, pero no los únicos.</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- PANEL DERECHO: La respuesta -->
+  <div class="diptico">
+  <div class="panel panel-respuesta">
+    <h2 class="panel-titulo">Regulación para<br>el mundo <span>digital</span></h2>
+    <p class="panel-intro">
+      En los años 80 se obligó a los bares a colgar una carta de precios visible.<br />Hoy necesitamos una respuesta equivalente para los algoritmos.
+    </p>
+
+    <div class="bloque bloque-resp">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico4.png" /></div>
+        <span class="bloque-titulo">Real Decreto-ley de emergencia</span>
+      </div>
+      <p class="bloque-texto">El Ministerio de Consumo ha aprobado una norma que limita las subidas de precios en situaciones de emergencia —como ocurrió con los vuelos tras Adamuz, los hoteles en la DANA o los alojamientos en las borrascas de Andalucía y Extremadura.</p>
+    </div>
+
+    <div class="bloque-divider" style="background:#333"></div>
+
+    <div class="bloque bloque-resp">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico2.png" /></div>
+        <span class="bloque-titulo">Ley de Consumo Sostenible</span>
+      </div>
+      <p class="bloque-texto">En tramitación: regulará los precios dinámicos y personalizados de forma estructural. Transparencia, estabilidad y límites al poder algorítmico de las grandes plataformas intermediarias.</p>
+    </div>
+
+    <div class="bloque-divider" style="background:#333"></div>
+
+    <div class="bloque bloque-resp">
+      <div class="bloque-header">
+        <div class="bloque-icono"><img src="img/ico7.png" /></div>
+        <span class="bloque-titulo">Marco europeo</span>
+      </div>
+      <p class="bloque-texto">España impulsa junto a la UE la regulación de plataformas oligopólicas para reducir su poder de extracción de rentas y obligarlas a cambiar sus algoritmos en favor de la transparencia y la competencia efectiva.</p>
+    </div>
+
+    <!-- Demandas -->
+    <div class="demandas">
+      <p class="demandas-titulo">El camino para proteger tus derechos de consumo</p>
+      <div class="demanda-item"><div class="demanda-bullet"></div>Transparencia y estabilidad de precios al comparar y contratar</div>
+      <div class="demanda-item"><div class="demanda-bullet"></div>Reducción del poder oligopólico de las plataformas digitales</div>
+      <div class="demanda-item"><div class="demanda-bullet"></div>Algoritmos regulados: que no conviertan emergencias en negocio</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ──────────────────────────────── -->
+<!--  CARA EXTERIOR                  -->
+<!-- ──────────────────────────────── -->
+<div class="exterior">
+
+  <!-- CONTRAPORTADA -->
+  <div class="panel-contraportada">
+    <h2 class="contra-titulo">Ante los precios<br>dinámicos, tienes<br>derechos.</h2>
+
+    <div class="derecho-item">
+      <div class="derecho-num">01</div>
+      <div class="derecho-contenido">
+        <p class="derecho-nombre">Transparencia de precios</p>
+        <p class="derecho-desc">Tienes derecho a conocer el precio final antes de contratar, sin sorpresas ni cambios durante el proceso de compra.</p>
+      </div>
+    </div>
+
+    <div class="derecho-item">
+      <div class="derecho-num">02</div>
+      <div class="derecho-contenido">
+        <p class="derecho-nombre">Protección en emergencias</p>
+        <p class="derecho-desc">Las plataformas no pueden aprovechar catástrofes o situaciones de urgencia para multiplicar los precios de forma abusiva.</p>
+      </div>
+    </div>
+
+    <div class="derecho-item">
+      <div class="derecho-num">03</div>
+      <div class="derecho-contenido">
+        <p class="derecho-nombre">No a la discriminación de precios</p>
+        <p class="derecho-desc">Ningún algoritmo puede cobrarte más en función de tu perfil, historial o vulnerabilidad como consumidor/a.</p>
+      </div>
+    </div>
+
+    <div class="derecho-item">
+      <div class="derecho-num">04</div>
+      <div class="derecho-contenido">
+        <p class="derecho-nombre">Regulación efectiva</p>
+        <p class="derecho-desc">Desde el Ministerio de Consumo trabajamos para que exista un marco regulatorio que limite el poder de las plataformas y proteja al consumidor.</p>
+      </div>
+    </div>
+
+    <div class="contra-footer">
+      <div class="ministerio-logo-placeholder"><img src="img/MDSCA.Gob.Web.jpg" /></div>
+      <p class="ministerio-nombre">Ministerio de Derechos Sociales,<br>Consumo y Agenda 2030</p>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>
