@@ -120,10 +120,16 @@
     gap: 10px;
     margin-bottom: 7px;
   }
+  .bloque-header2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+  }
 
   .bloque-icono {
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +154,12 @@
     color: #3a3a3a;
     padding-left: 38px;
   }
-
+	.bloque-texto2 {
+    font-size: 12.5px;
+    line-height: 1.25;
+    color: #3a3a3a;
+    padding-left: 38px;
+  }
   .bloque-divider {
     height: 1px;
     background: #E5E0D8;
@@ -383,7 +394,7 @@
   }
   .portada-titulo-grande2 {
     font-family: 'Playfair Display', serif;
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 900;
     line-height: 1.05;
     color: black;
@@ -407,11 +418,12 @@
   }
 
   .portada-subtitulo {
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #555;
-    max-width: 320px;
+	padding-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  border-left: var(--naranja) 4px solid;
+  padding-left: 10px;
   }
 
   .portada-pill {
@@ -514,7 +526,7 @@
         Precios equitativos,<br><span class="highlight">derechos</span><span class="highlight">protegidos.</span>
       </h1>
       <p class="portada-subtitulo">
-        Hay normas que regulan cómo se debe informar de precios y rebajas: conoce tus derechos.
+        Hay normas que regulan cómo se debe informar<br />de precios y rebajas: conoce tus derechos.
       </p>
     </div>
 
@@ -615,52 +627,51 @@
 <!--  CARA INTERIOR                  -->
 <!-- ──────────────────────────────── -->
 <div class="diptico">
-
-  <div class="panel panel-problema">
+  <div class="panel-portada">
+    <div>
+      <h1 class="portada-titulo-grande2">
+        Precios dinámicos,<br><span class="highlight">y precios personalizados.</span>
+      </h1>
+      <p class="portada-subtitulo"><i>¿Por qué los billetes de avión cuestan el doble si lo buscas dos veces?<br />¿Por qué los hoteles suben de precio cuando hay una catástrofe?</i>
+      </p>
+    </div>
+<br />&nbsp;<br /><br /><br />
+  <div class="panel-problema">
 
     <div class="bloque">
-      <div class="bloque-header">
+      <div class="bloque-header2">
         <div class="bloque-icono"><img src="img/ico1.png" /></div>
         <span class="bloque-titulo">Qué son los precios personalizados</span>
       </div>
-      <p class="bloque-texto">Son precios calculados de forma individual para cada persona. Para fijarlos, las empresas utilizan datos personales, historial de navegación o compras, y sistemas automáticos que analizan los gustos, hábitos y la disposición a pagar de cada usuario. El resultado es que dos personas pueden ver precios distintos por el mismo producto o servicio.</p>
+      <p class="bloque-texto2">Son precios calculados de forma individual para cada persona. Para fijarlos, las empresas utilizan datos personales, historial de navegación o compras, y sistemas automáticos que analizan los gustos, hábitos y la disposición a pagar de cada usuario. El resultado es que dos personas pueden ver precios distintos por el mismo producto o servicio.</p>
     </div>
 
     <div class="bloque-divider"></div>
 
     <div class="bloque">
-      <div class="bloque-header">
-        <div class="bloque-icono"><img src="img/ico6.png" /></div>
+      <div class="bloque-header2">
+        <div class="bloque-icono"><img src="img/ico5.png" /></div>
         <span class="bloque-titulo">Qué son los precios dinámicos</span>
       </div>
-      <p class="bloque-texto">Son precios que cambian de forma automática y en tiempo real según factores externos y objetivos, como la oferta y la demanda, la disponibilidad del producto o servicio, o el momento en que se realiza la compra. La clave es que estas variaciones afectan a todos por igual: no dependen de quién sea el comprador ni de sus datos personales o comportamiento, sino de las condiciones del mercado en ese momento.</p>
+      <p class="bloque-texto2">Son precios que cambian de forma automática y en tiempo real según factores externos y objetivos, como la oferta y la demanda, la disponibilidad del producto o servicio, o el momento en que se realiza la compra.<br />La clave es que estas variaciones afectan a todos por igual: no dependen de quién sea el comprador ni de sus datos personales o comportamiento, sino de las condiciones del mercado en ese momento.</p>
     </div>
 
     <div class="bloque-divider"></div>
 
     <div class="bloque">
-      <div class="bloque-header">
+      <div class="bloque-header2">
         <div class="bloque-icono"><img src="img/ico3.png" /></div>
-        <span class="bloque-titulo">El papel de las plataformas</span>
-      </div>
-      <p class="bloque-texto">Hoteles, transportistas, artistas y pequeños negocios ya no controlan sus propios precios: lo hacen las plataformas que intermedian. Sus algoritmos maximizan beneficios a costa de consumidores y prestadores del servicio por igual.</p>
-    </div>
-
-    <div class="bloque-divider"></div>
-
-    <div class="bloque">
-      <div class="bloque-header">
-        <div class="bloque-icono"><img src="img/ico5.png" /></div>
         <span class="bloque-titulo">¿Qué derechos te asisten?</span>
       </div>
-      <p class="bloque-texto">Las empresas que apliquen precios dinámicos o personalizados están obligadas a explicar claramente cómo los calculan, para que cualquier persona pueda tomar una decisión de compra informada.
-<br /><br />En situaciones de emergencia declarada, queda prohibido subir los precios aprovechando el aumento de la demanda. Además, ningún sistema automatizado podrá fijar precios basándose en criterios discriminatorios ni aprovecharse de la situación de vulnerabilidad de los consumidores.
+      <p class="bloque-texto2">Las empresas que apliquen precios dinámicos o personalizados están obligadas a explicar claramente cómo los calculan, para que cualquier persona pueda tomar una decisión de compra informada.
+<br />En situaciones de emergencia declarada, queda prohibido subir los precios aprovechando el aumento de la demanda. Además, ningún sistema automatizado podrá fijar precios basándose en criterios discriminatorios ni aprovecharse de la situación de vulnerabilidad de los consumidores.
 </p>
     </div>
   </div>
   </div>
   </div>
-
+<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
+  </div>
 </body>
 </html>
 
