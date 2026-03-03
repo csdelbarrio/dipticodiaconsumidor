@@ -300,7 +300,7 @@
     font-size: 36px;
     font-weight: 900;
     color: var(--naranja);
-    line-height: 1;
+    line-height: 0.25;
     width: 36px;
     flex-shrink: 0;
   }
@@ -316,10 +316,14 @@
     margin-bottom: 3px;
   }
 
-  .derecho-desc {
+  .derecho-desc, .derecho-desc li {
     font-size: 12.5px;
     line-height: 1.6;
     color: #555;
+  }
+	ul.derecho-desc {
+		list-style-type: decimal;
+		padding-left: 12px;
   }
 
   .contra-footer {
@@ -385,8 +389,16 @@
     color: black;
     margin: 0 0 0 0;
   }
+  .portada-titulo-grande3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: white;
+    margin: 0 0 0 0;
+  }
 
-  .portada-titulo-grande .highlight, .portada-titulo-grande2 .highlight {
+  .portada-titulo-grande .highlight, .portada-titulo-grande2 .highlight, .portada-titulo-grande3 .highlight {
     display: inline-block;
     background: var(--naranja);
     color: white;
@@ -499,10 +511,10 @@
     <div>
       <p class="portada-eyebrow">Día de las Personas Consumidoras · 2026</p>
       <h1 class="portada-titulo-grande">
-        Precios equitativos,<br><span class="highlight">derechos</span><span class="highlight">protegidos</span>
+        Precios equitativos,<br><span class="highlight">derechos</span><span class="highlight">protegidos.</span>
       </h1>
       <p class="portada-subtitulo">
-        Hay normas que regulan cómo se debe informar de precios y rebajas, conoce tus derechos.
+        Hay normas que regulan cómo se debe informar de precios y rebajas: conoce tus derechos.
       </p>
     </div>
 
@@ -517,10 +529,11 @@
   <!-- PANEL DERECHO: La respuesta -->
   <div class="diptico">
   <div class="panel panel-respuesta">
-      <h1 class="portada-titulo-grande">
-        Derechos para las<br><span class="highlight">personas consumidoras</span>
+      <h1 class="portada-titulo-grande3">
+        Derechos para las<br><span class="highlight">personas consumidoras.</span>
       </h1>
 
+<br />&nbsp;<br />&nbsp;<br />
     <div class="bloque bloque-resp">
       <div class="bloque-header">
         <div class="bloque-icono"><img src="img/ico4.png" /></div>
@@ -552,7 +565,7 @@
   </div>
 
 </div>
-<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;
+<br />&nbsp;<br />&nbsp;<br />&nbsp;
 <!-- ──────────────────────────────── -->
 <!--  CARA EXTERIOR                  -->
 <!-- ──────────────────────────────── -->
@@ -561,9 +574,10 @@
   <!-- CONTRAPORTADA -->
   <div class="panel-contraportada">
       <h1 class="portada-titulo-grande">
-        Precaución<br><span class="highlight">derechos</span><span class="highlight">en las rebajas.</span>
+        Precaución<br><span class="highlight">en las rebajas.</span>
       </h1>
 
+<br />&nbsp;<br />&nbsp;<br />
     <div class="derecho-item">
       <div class="derecho-num">01</div>
       <div class="derecho-contenido">
@@ -577,11 +591,20 @@
       <div class="derecho-num">02</div>
       <div class="derecho-contenido">
         <p class="derecho-nombre">Las garantías y condiciones no cambian</p>
-        <p class="derecho-desc">Si se aplican condiciones especiales el comercio [MS1.1][TS1.2][TS1.3]debe advertirlo al realizar la oferta.<br /><br /> 
-La garantía legal mínima de productos nuevos es de 3 años, o dos si son elementos digitales. <br /><br />
-Es obligatorio para quien vende reparar, sustituir, hacer un descuento o reembolso cuando el producto sea defectuoso.<br /><br />
-En las compras a distancia, dentro de la UE, podrá devolver el producto en un plazo de 14 días sin necesidad de justificar el motivo, sin retención de gastos, ni penalización, salvo algunas excepciones. 
-</p>
+			<ul class="derecho-desc">
+		  		<li>
+					Si se aplican condiciones especiales el comercio debe advertirlo al realizar la oferta.
+				</li>
+		  		<li>
+					La garantía legal mínima de productos nuevos es de tres años, o dos si son elementos digitales.
+				</li>
+				<li>
+					Es obligatorio para quien vende reparar, sustituir, hacer un descuento o reembolso cuando el producto sea defectuoso.
+				</li>
+				<li>
+					En las compras a distancia, dentro de la UE, podrá devolver el producto en un plazo de 14 días sin necesidad de justificar el motivo, sin retención de gastos, ni penalización, salvo algunas excepciones. 
+				</li>
+		  </ul>
       </div>
     </div>
 
@@ -600,7 +623,7 @@ En las compras a distancia, dentro de la UE, podrá devolver el producto en un p
         <div class="bloque-icono"><img src="img/ico1.png" /></div>
         <span class="bloque-titulo">Qué son los precios personalizados</span>
       </div>
-      <p class="bloque-texto">Son precios cuyo importe se determina o ajusta específicamente para una persona concreta mediante el uso de datos personales, perfiles de comportamiento u otros sistemas automatizados que permitan inferir características, preferencias o probabilidad de compra individuales, de modo que el precio ofrecido varia en cada persona.</p>
+      <p class="bloque-texto">Son precios calculados de forma individual para cada persona. Para fijarlos, las empresas utilizan datos personales, historial de navegación o compras, y sistemas automáticos que analizan los gustos, hábitos y la disposición a pagar de cada usuario. El resultado es que dos personas pueden ver precios distintos por el mismo producto o servicio.</p>
     </div>
 
     <div class="bloque-divider"></div>
@@ -610,7 +633,7 @@ En las compras a distancia, dentro de la UE, podrá devolver el producto en un p
         <div class="bloque-icono"><img src="img/ico6.png" /></div>
         <span class="bloque-titulo">Qué son los precios dinámicos</span>
       </div>
-      <p class="bloque-texto">Son los precios cuyo importe se determina o modifica de forma automatizada y en tiempo real a partir de variables externas y objetivas como las condiciones del mercado de oferta y demanda, de disponibilidad del bien o servicio, el momento de contratación o factores comparables; siempre que dichas variaciones no se basen en el perfil, características personales o comportamiento individual del consumidor.</p>
+      <p class="bloque-texto">Son precios que cambian de forma automática y en tiempo real según factores externos y objetivos, como la oferta y la demanda, la disponibilidad del producto o servicio, o el momento en que se realiza la compra. La clave es que estas variaciones afectan a todos por igual: no dependen de quién sea el comprador ni de sus datos personales o comportamiento, sino de las condiciones del mercado en ese momento.</p>
     </div>
 
     <div class="bloque-divider"></div>
@@ -630,18 +653,12 @@ En las compras a distancia, dentro de la UE, podrá devolver el producto en un p
         <div class="bloque-icono"><img src="img/ico5.png" /></div>
         <span class="bloque-titulo">¿Qué derechos te asisten?</span>
       </div>
-      <p class="bloque-texto">Las empresas que oferten precios dinámicos o personalizados deben informarte de en base a qué parámetros se calcula la oferta para que las personas sean libres de decidir sobre su compra con toda la información. 
-<br /><br />En situaciones de emergencia declarada no podrán subirse los precios por un aumento de la demanda. 
-<br /><br />Ningún algoritmo puede basar la decisión de precio ofertado en criterios discriminatorios o que exploten la vulnerabilidad de las personas consumidoras. 
+      <p class="bloque-texto">Las empresas que apliquen precios dinámicos o personalizados están obligadas a explicar claramente cómo los calculan, para que cualquier persona pueda tomar una decisión de compra informada.
+<br /><br />En situaciones de emergencia declarada, queda prohibido subir los precios aprovechando el aumento de la demanda. Además, ningún sistema automatizado podrá fijar precios basándose en criterios discriminatorios ni aprovecharse de la situación de vulnerabilidad de los consumidores.
 </p>
     </div>
   </div>
   </div>
-
-    <div class="contra-footer">
-      <div class="ministerio-logo-placeholder"><img src="img/MDSCA.Gob.Web.jpg" /></div>
-      <p class="ministerio-nombre">Ministerio de Derechos Sociales,<br>Consumo y Agenda 2030</p>
-    </div>
   </div>
 
 </body>
